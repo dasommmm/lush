@@ -5,55 +5,60 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LUSH</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;900&family=Noto+Sans:wght@900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/index.css">
 </head>
 <body>
     <header>
-        <div class="header-wrapper">
-            <div class="logo-container">
-                <a href="#">
-                    <h1 class="hidden">lush</h1>
-                    <!-- position absolute,width100% height100%, top0 left0 z-index높게 -->
-                </a>
-                <figure class="logo-black">
-                    <img src="./img/logo-black.svg" alt="black-logo">
-                </figure>
-            </div>
-            <ul class="header-icon">
-                <li>
-                    <a href="#">
-                        <figure>
-                            <img src="./img/akar-icons_shopping-bag.svg" alt="bag">
-                        </figure>
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <figure>
-                            <img src="./img/ri_heart-3-line.svg" alt="bag">
-                        </figure>
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <figure>
-                            <img src="./img/bx_search.svg" alt="bag">
-                        </figure>
-                    </a>
-                </li>
-                <li>
-                    <div class="menu-bar">
-                        <figure>
-                            <img src="./img/gg_menu.svg" alt="bag">
-                        </figure>
-                    <div>
-                </li>
-            </ul>
+        <div class="logo-container">
+            <a href="#">
+                <h1 class="hidden">lush</h1>
+                <!-- position absolute,width100% height100%, top0 left0 z-index높게 -->
+            </a>
+            <figure class="logo-black">
+                <img src="./img/logo-black.svg" alt="black-logo">
+            </figure>
         </div>
+        <ul class="header-icon">
+            <li>
+                <a href="#">
+                    <figure>
+                        <img src="./img/akar-icons_shopping-bag.svg" alt="bag">
+                    </figure>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <figure>
+                        <img src="./img/ri_heart-3-line.svg" alt="bag">
+                    </figure>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <figure>
+                        <img src="./img/bx_search.svg" alt="bag">
+                    </figure>
+                </a>
+            </li>
+            <li>
+                <div class="menu-bar">
+                    <figure>
+                        <img src="./img/gg_menu.svg" alt="bag">
+                    </figure>
+                <div>
+            </li>
+        </ul>
     </header>
     <main>
         <div class="video-container">
-            <video src=""></video>
+            <video autoplay loop playsinline muted src="./video/The Experimenter_1.mp4"></video>
         </div>
         <section class="best-seller">
             <h2>BEST SELLER</h2>
@@ -68,17 +73,14 @@
                         </p>
                         <button class="more-black">더보기</button>
                     </div>
-                    <div class="product-img">
-                        <div class="circle"></div>
-                        <div class="img-container">
-                            <figure>
-                                <img src="./img/오렌지.svg" alt="오렌지">
-                            </figure>
-                            <figure>
-                                <img src="./img/오렌지텍스쳐.svg" alt="오렌지텍스쳐">
-                            </figure>
-                        </div>
-                        <!-- .circle안에 figure 두개 넣어줘야하는지? -->
+                    <div class="product-img"> <!--여기에 원 만들기 보더레디우스와 백그라운드 컬러 줘서 오버플러우 없이 배치-->
+                        <figure>
+                            <img src="./img/오렌지.svg" alt="오렌지">
+                        </figure>
+                        <figure>
+                            <img src="./img/오렌지텍스쳐.svg" alt="오렌지텍스쳐">
+                        </figure>
+                    <!-- .circle안에 figure 두개 넣어줘야하는지? -->
                     </div>
                 </div>
                 <div class="product-wrapper">
@@ -96,15 +98,12 @@
                         <button class="more-black">더보기</button>
                     </div>
                     <div class="product-img">
-                        <div class="circle"></div>
-                        <div class="img-container">
-                            <figure>
-                                <img src="./img/마스크.svg" alt="마스크">
-                            </figure>
-                            <figure>
-                                <img src="./img/텍스쳐마스크.svg" alt="마스크텍스쳐">
-                            </figure>
-                        </div>
+                        <figure>
+                            <img src="./img/마스크.svg" alt="마스크">
+                        </figure>
+                        <figure>
+                            <img src="./img/텍스쳐마스크.svg" alt="마스크텍스쳐">
+                        </figure>
                     </div>
                 </div>
                 <div class="product-wrapper">
@@ -120,15 +119,12 @@
                         <button class="more-black">더보기</button>
                     </div>
                     <div class="product-img">
-                        <div class="circle"></div>
-                        <div class="img-container">
-                            <figure>
-                                <img src="./img/슬리피.svg" alt="슬리피">
-                            </figure>
-                            <figure>
-                                <img src="./img/슬리피텍스쳐.svg" alt="슬리피텍스쳐">
-                            </figure>
-                        </div>
+                        <figure>
+                            <img src="./img/슬리피.svg" alt="슬리피">
+                        </figure>
+                        <figure>
+                            <img src="./img/슬리피텍스쳐.svg" alt="슬리피텍스쳐">
+                        </figure>
                     </div>
                 </div>
             </div>
@@ -136,12 +132,7 @@
         <section class="lush-event">
             <h2>LUSH EVENT</h2>
             <div class="festa-container">
-                <div class="event-img">
-                    <div class="back-img">
-                        <!-- <figure>
-                            <img src="./img/festa.svg" alt="festa">
-                        </figure> -->
-                    </div>
+                <div class="event-img festa-img"> <!--얘한테 css로 백그라운드 이미지-->
                     <div class="move">
                         <span class="f-move">F</span>
                         <span class="e-move">E</span>
@@ -155,8 +146,6 @@
                     <figure class="event-title-wrapper">
                         <img src="./img/러쉬패스타.svg" alt="festa-text">
                     </figure>
-                    <!-- event title wrapper div로감싸는게 맞는건지 
-                    전반적으로 여기 섹션 이미지 부분 봐주ㅜ세요ㅠㅠ-->
                     <div>
                         <p class="small-title">러쉬 공식 홈페이지 리뉴얼!</p>
                         <p class="event-description">
@@ -169,18 +158,7 @@
                 </div>
             </div>
             <div class="summer-container">
-                <div class="event-img">
-                    <div class="back-img">
-                        <figure class="rec-one">
-                            <img src="./img/Rectangle1.svg" alt="흐린네모">
-                        </figure>
-                        <figure class="rec-two">
-                            <img src="./img/Rectangle2.svg" alt="중간네모">
-                        </figure>
-                        <figure class="rec-three">
-                            <img src="./img/Rectangle3.svg" alt="진한네모">
-                        </figure>
-                    </div>
+                <div class="event-img summer-img"> <!--여기에 css 이미지-->
                     <div class="summer-product">
                         <figure>
                             <img src="./img/salty.svg" alt="">
@@ -223,8 +201,7 @@
                 </div> 
             </div>
             <div class="review-container">
-                <div class="event-img">
-                    <div class="back-img"></div>
+                <div class="event-img review-back">
                     <div class="be-the-best">
                         <div>
                             <div>
@@ -292,11 +269,11 @@
                 <div class="long-container"> <!--여기는 벡그라운드 컬러가 보라-->
                     <div class="naked">
                         <figure class="naked-logo">
-                            <img src="" alt="">
+                            <img src="./img/naked-logo.svg" alt="">
                         </figure>
                         <div class="top">
                             <figure>
-                                <img src="" alt="">
+                                <img src="./img/NAKED사진.svg" alt="">
                             </figure>
                             <div class="naked-text">
                                 <p>
@@ -323,11 +300,11 @@
                     </div>
                     <div class="fight">
                         <figure class="fight-logo">
-                            <img src="" alt="">
+                            <img src="./img/fight-logo.svg" alt="">
                         </figure>
                         <div class="top">
                             <figure>
-                                <img src="" alt="">
+                                <img src="./img/fight.svg" alt="">
                             </figure>
                             <div class="fight-text">
                                 <p>
@@ -349,11 +326,11 @@
                     </div>
                     <div class="vegan">
                         <figure class="vegan-logo">
-                            <img src="" alt="">
+                            <img src="img/vegan-logo.svg" alt="">
                         </figure>
                         <div class="top">
                             <figure>
-                                <img src="" alt="">
+                                <img src="./img/vegan.svg" alt="">
                             </figure>
                             <div class="vegan-text">
                                <p>
@@ -379,11 +356,11 @@
                     </div>
                     <div class="handmade">
                         <figure class="handmade-logo">
-                            <img src="" alt="">
+                            <img src="./img/handmade-logo.svg" alt="">
                         </figure>
                         <div class="top">
                             <figure>
-                                <img src="" alt="">
+                                <img src="./img/handmade-img.svg" alt="">
                             </figure>
                             <div class="vegan-text">
                                 <p>
@@ -409,9 +386,15 @@
         </section>
         <section class="spa">
             <div class="black-container">
+                <figure class="arrow-left">
+                    <img src="./img/left.svg" alt="">
+                </figure>
+                <figure class="arrow-right">
+                    <img src="./img/rigth.svg" alt="">
+                </figure>
                 <div class="top-spa">
                     <figure>
-                        <img src="" alt="">
+                        <img src="./img/spa1.svg" alt="">
                     </figure>
                     <div>
                         <p class="spa-name">프레쉬 페이셜</p>
@@ -423,17 +406,27 @@
                 <div class="bottom-spa">
                     <div>
                         <figure class="spa-icon">
-                            <img src="" alt="">
+                            <img src="./img/ant-design_smile-outlined.svg" alt="">
                         </figure>
                         <div class="spa-des">
                             <p class="spa-des-title">간편한 페이셜 트리트먼트</p>
                             <p class="spa-des-small">맞춤형 스킨 케어로 수분과 영양 공급</p>
                             <p class="spa-des-small">핸드 크림을 이용한 핸드 케어</p>
                         </div>
+                    </div>
+                    <div>
+                        <figure class="spa-icon">
+                            <img src="./img/carbon_skill-level.svg" alt="">
+                        </figure>
                         <div class="spa-des">
                             <p class="spa-des-title">네이키드 레벨1</p>
                             <p class="spa-des-small">탈의가 거의 필요 없는 정도</p>
                         </div>
+                    </div>
+                    <div>
+                        <figure class="spa-icon">
+                            <img src="./img/bx_time.svg" alt="">
+                        </figure>
                         <div class="spa-des">
                             <p class="spa-des-title">소요시간</p>
                             <p class="spa-des-small">컨설테이션 15분 + 트리트먼트 30분</p>
@@ -446,7 +439,7 @@
             <div class="black-container">
                 <div class="top-spa">
                     <figure>
-                        <img src="" alt="">
+                        <img src="./img/spa2.svg" alt="">
                     </figure>
                     <div>
                         <p class="spa-name">르네상스</p>
@@ -458,7 +451,7 @@
                 <div class="bottom-spa">
                     <div>
                         <figure class="spa-icon">
-                            <img src="" alt="">
+                            <img src="./img/ant-design_smile-outlined.svg" alt="">
                         </figure>
                         <div class="spa-des">
                             <p class="spa-des-title">전신 트리트먼트</p>
@@ -471,10 +464,20 @@
                                 <br>오감을 자극하는 트리트먼트
                             </p>
                         </div>
+                    </div>
+                    <div>
+                        <figure class="spa-icon">
+                            <img src="./img/carbon_skill-level.svg" alt="">
+                        </figure>
                         <div class="spa-des">
                             <p class="spa-des-title">네이키드 레벨2</p>
                             <p class="spa-des-small">약간의 탈의가 필요합니다</p>
                         </div>
+                    </div>
+                    <div>
+                        <figure class="spa-icon">
+                            <img src="./img/bx_time.svg" alt="">
+                        </figure>
                         <div class="spa-des">
                             <p class="spa-des-title">소요시간</p>
                             <p class="spa-des-small">컨설테이션 15분 + 트리트먼트 40분</p>
@@ -489,7 +492,7 @@
             <div class="black-container">
                 <div class="top-spa">
                     <figure>
-                        <img src="" alt="">
+                        <img src="./img/spa3.svg" alt="">
                     </figure>
                     <div>
                         <p class="spa-name">
@@ -504,7 +507,7 @@
                 <div class="bottom-spa">
                     <div>
                         <figure class="spa-icon">
-                            <img src="" alt="">
+                            <img src="./img/ant-design_smile-outlined.svg" alt="">
                         </figure>
                         <div class="spa-des">
                             <p class="spa-des-title">두피 트리트먼트</p>
@@ -517,10 +520,19 @@
                                 <br>긴장을 풀어줄 견고한 압
                             </p>
                         </div>
+                    <div>
+                        <figure class="spa-icon">
+                            <img src="./img/carbon_skill-level.svg" alt="">
+                        </figure>
                         <div class="spa-des">
                             <p class="spa-des-title">네이키드 레벨1</p>
                             <p class="spa-des-small">탈의가 거의 필요 없는 정도</p>
                         </div>
+                    </div>
+                    <div>
+                        <figure class="spa-icon">
+                            <img src="./img/bx_time.svg" alt="">
+                        </figure>
                         <div class="spa-des">
                             <p class="spa-des-title">소요시간</p>
                             <p class="spa-des-small">컨설테이션 15분 + 트리트먼트 25분</p>
@@ -536,7 +548,7 @@
     </main>
     <footer>
         <figure class="logo-white">
-            <img src="" alt="logo">
+            <img src="./img/whitelogo.svg" alt="logo">
         </figure>
         <div class="footer-top">
             <div class="left">
@@ -556,7 +568,7 @@
                 <div class="icon-box">
                     <a href="#">
                         <figure>
-                            <img src="" alt="">
+                            <img src="./img/twitter.svg" alt="">
                         </figure>
                     </a>
                     <a href="#">
