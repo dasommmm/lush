@@ -92,7 +92,7 @@ h2{
 .product-wrapper{
     display: flex;
     align-items: center;
-
+    margin-bottom: 150px;
 }
 
 
@@ -152,6 +152,7 @@ h3{
     flex-basis: 70%;
     display: flex;
     justify-content: center;
+  
 }
 
 .circle{
@@ -162,6 +163,9 @@ h3{
     align-items: center;
     border-radius: 50%;
     box-shadow: 13px 13px 14px rgba(0, 0, 0, 0.25);
+    position: relative;
+    z-index: -2;
+
 }
 
 .product-img:hover .circle>*{
@@ -173,9 +177,8 @@ h3{
 
 
 .black-circle{
-    background-color: var(--black);
-    position: relative;
-    z-index: -2;
+    background-color: rgba(34,34,34,0.9);
+    
     
 }
 
@@ -199,3 +202,18 @@ h3{
     겨우 맞췄어요ㅜㅜ */
 }
 
+.green-circle{
+    background-color: rgba(0,158,37,0.9);
+    /* 배경색만 오퍼시티 주고싶은데 rgba말고 16진수로는 표현 못하나요 */
+}
+
+.mask-pro{
+    width: 331px;
+    height: 383px;
+    margin: 0 auto;
+    transition: 0.5s;
+}
+
+.mask-tex{
+    position: absolute;
+}
