@@ -141,7 +141,7 @@ h3{
     font-size: 24px;
     font-weight: 400;
     cursor: pointer;
-    transition: 1s;
+    transition: 0.5s;
 }
 
 .more-black:hover{
@@ -152,7 +152,19 @@ h3{
     flex-basis: 70%;
     display: flex;
     justify-content: center;
-  
+    position: relative;
+}
+
+.a-link{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 2;
+    border-radius: 50%;
+/* a태그에 보더레디우스 괜찮은가요? */
+/* 아니면 position relative를 circle에는 못주겠죠? 부모가 아니라 자식이니까? */
 }
 
 .circle{
@@ -163,23 +175,20 @@ h3{
     align-items: center;
     border-radius: 50%;
     box-shadow: 13px 13px 14px rgba(0, 0, 0, 0.25);
-    position: relative;
-    z-index: -2;
-
 }
 
 .product-img:hover .circle>*{
     transform: scale(1.03);
-    /* transition: 5s; */
 }
 /* circle을 호버하면 스케일 커지게 하고싶은데 z-index때문에 안돼요ㅜㅜ */
 
-
+/* .a-link:hover .circle{
+    transform: scale(1.03);
+} */
 
 .black-circle{
     background-color: rgba(34,34,34,0.9);
-    
-    
+    position: relative;
 }
 
 .orange-pro{
@@ -187,6 +196,7 @@ h3{
     height: 335px;
     margin: 0 auto;
     transition: 0.5s;
+    position: relative;
 
 }
 
@@ -196,7 +206,7 @@ h3{
     position: absolute;
     top: 0px;
     left: 300px;
-    z-index: -1;
+    /* z-index: -1; */
     transition: 0.5s;
     /* z-index로 위치 주는 법 말고는 없을까요 검정 원에도 z-index를 줘서
     겨우 맞췄어요ㅜㅜ */
@@ -206,14 +216,22 @@ h3{
     background-color: rgba(0,158,37,0.9);
     /* 배경색만 오퍼시티 주고싶은데 rgba말고 16진수로는 표현 못하나요 */
 }
+.mask-tex{
+    position: absolute;
+    top: 0px;
+    left: -50px;
+    transition: 0.5s;
+}
 
 .mask-pro{
     width: 331px;
     height: 383px;
     margin: 0 auto;
     transition: 0.5s;
+    position: relative;
 }
 
-.mask-tex{
-    position: absolute;
+
+.reverse{
+    flex-direction: row-reverse;
 }
