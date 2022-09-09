@@ -84,7 +84,7 @@ h2{
     font-family: 'Noto Sans', sans-serif;
     font-size: 94px;
     color: var(--green);
-    margin-top: 200px;
+    margin-top: 300px;
     margin-bottom: 200px;
     text-align: center;
 }
@@ -92,7 +92,7 @@ h2{
 .product-wrapper{
     display: flex;
     align-items: center;
-    margin-bottom: 150px;
+    margin-bottom: 250px;
 }
 
 
@@ -127,7 +127,7 @@ h3{
     font-weight: 500;
     font-size: 16px;
     line-height: 22px;
-    margin-bottom: 36px;
+    margin-bottom: 48px;
 }
 
 .more-black{
@@ -142,6 +142,7 @@ h3{
     font-weight: 400;
     cursor: pointer;
     transition: 0.5s;
+    /* margin: 0 auto; */
 }
 
 .more-black:hover{
@@ -186,9 +187,9 @@ h3{
     transform: scale(1.03);
 } */
 
-.black-circle{
+.black{
     background-color: rgba(34,34,34,0.9);
-    position: relative;
+    /* position: relative; */
 }
 
 .orange-pro{
@@ -204,28 +205,30 @@ h3{
     width: 341px;
     height: 305px;
     position: absolute;
-    top: 0px;
-    left: 300px;
+    top: -20px;
+    left: 400px;
     /* z-index: -1; */
     transition: 0.5s;
     /* z-index로 위치 주는 법 말고는 없을까요 검정 원에도 z-index를 줘서
     겨우 맞췄어요ㅜㅜ */
 }
 
-.green-circle{
+.green{
     background-color: rgba(0,158,37,0.9);
     /* 배경색만 오퍼시티 주고싶은데 rgba말고 16진수로는 표현 못하나요 */
 }
 .mask-tex{
     position: absolute;
-    top: 0px;
-    left: -50px;
+    width: 354px;
+    height: 343px;
+    top: -20px;
+    left: 40px;
     transition: 0.5s;
 }
 
 .mask-pro{
-    width: 331px;
-    height: 383px;
+    width: 337px;
+    height: 390px;
     margin: 0 auto;
     transition: 0.5s;
     position: relative;
@@ -234,4 +237,112 @@ h3{
 
 .reverse{
     flex-direction: row-reverse;
+}
+
+.purple{
+    background-color: rgba(123, 31, 162, 0.9);
+}
+
+.sleepy-pro{
+    margin: 0 auto;
+    width: 201px;
+    height: 425px;
+    position: relative;
+    /* 왜 여기 relative를 주면 
+    sleepy-tex가 sleepy-pro뒤로 갈까요 */
+}
+
+.sleepy-tex{
+    position: absolute;
+    top: -20px;
+    left: 400px;
+/* left를 700px하면 마치 뒤로 멀어지듯
+크기가 작아져는데 왜죠? */
+}
+
+.lush-event{
+    margin: 0;
+}
+
+.lush-event h2{
+    color: var(--purple);
+}
+
+.event-con{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.event-img{
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    width: 949px;
+    /* width 949는 삭제해도 되나요? */
+    height: 1080px;
+    position: relative;
+    width: 50%;
+}
+
+.festa-img{
+    background-image: url(../img/festa.svg);
+    position: relative;
+}
+
+.move-wrapper{
+    display: flex;
+    position: absolute;
+    bottom: 300px;
+    left: 450px;
+    letter-spacing: 1.5em;
+}
+
+.move{
+    /* position: absolute; */
+    font-family: 'Noto Sans';
+    font-style: normal;
+    font-weight: 900;
+    font-size: 128px;
+    color: var(--white);
+    text-shadow: 7px 7px 5px rgba(0, 0, 0, 0.25);
+    
+}
+
+.event-title-wrapper{
+    width: 394px;
+    height: 79px;
+    margin-bottom: 72px;
+}
+
+.event-text{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.small-title{
+   font-family: Noto Sans KR;
+   font-weight: 700;
+   font-size: 36px;
+   margin-bottom: 36px;
+   color: var(--black2);
+}
+
+.event-description{
+   font-family: Noto Sans KR;
+   font-weight: 500;
+   font-size: 24px;
+   color: var(--black3);
+   letter-spacing: -0.03em;
+   line-height: 35px;
+   margin-bottom: 104px;
+}
+
+.event-text .more-black{
+    background-color: var(--black2);
 }
