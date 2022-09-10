@@ -83,6 +83,7 @@ section{
 h2{
     font-family: 'Noto Sans', sans-serif;
     font-size: 94px;
+    font-weight: 900;
     color: var(--green);
     margin-top: 300px;
     margin-bottom: 200px;
@@ -206,11 +207,14 @@ h3{
     height: 305px;
     position: absolute;
     top: -20px;
-    left: 400px;
+    left: 450px;
     /* z-index: -1; */
     transition: 0.5s;
     /* z-index로 위치 주는 법 말고는 없을까요 검정 원에도 z-index를 줘서
-    겨우 맞췄어요ㅜㅜ */
+    겨우 맞췄어요ㅜㅜ 
+    결국 z-index말고 relative를 제품사진 orange-pro에 줘서
+     했는데 hover에 문제가 있네요
+     그리고 orange-tex와 orange-pro는 서로 형제인데도 position relative와 absolute가 되는건가요?*/
 }
 
 .green{
@@ -222,7 +226,7 @@ h3{
     width: 354px;
     height: 343px;
     top: -20px;
-    left: 40px;
+    left: 100px;
     transition: 0.5s;
 }
 
@@ -255,7 +259,7 @@ h3{
 .sleepy-tex{
     position: absolute;
     top: -20px;
-    left: 400px;
+    left: 450px;
 /* left를 700px하면 마치 뒤로 멀어지듯
 크기가 작아져는데 왜죠? */
 }
@@ -263,6 +267,9 @@ h3{
 .lush-event{
     margin: 0;
 }
+
+/* 애네 마크업을 세로로 스크롤 내리면
+사진 바뀌는걸로 하고싶은데 못했어요 알려주새요 */
 
 .lush-event h2{
     color: var(--purple);
@@ -277,28 +284,30 @@ h3{
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
-    width: 949px;
-    /* width 949는 삭제해도 되나요? */
+    width: 950px;
+    /* width 950은 삭제해도 되나요? */
     height: 1080px;
-    position: relative;
     width: 50%;
+    position: relative;
 }
 
 .festa-img{
     background-image: url(../img/festa.svg);
-    position: relative;
 }
 
 .move-wrapper{
     display: flex;
-    position: absolute;
-    bottom: 300px;
-    left: 450px;
+    /* position: absolute; */
+    /* bottom: 300px; */
+    /* left: 160px; */
+    transform: translate(410px,600px);
     letter-spacing: 1.5em;
+    /* festa 글씨 위치를 어떻게 줘야할지
+    각각 f e s t a 를 absolute해서 줘야할까요
+    반응형 크기에 따라 글씨 위치 달라져요 */
 }
 
 .move{
-    /* position: absolute; */
     font-family: 'Noto Sans';
     font-style: normal;
     font-weight: 900;
@@ -319,10 +328,8 @@ h3{
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-    align-content: center;
+    align-content: space-around;
     justify-content: center;
-    align-items: center;
-
 }
 
 .small-title{
@@ -345,4 +352,46 @@ h3{
 
 .event-text .more-black{
     background-color: var(--black2);
+    margin: 0 auto;
+}
+
+.summer-img{
+    background-image: url(../img/올여름bacl.svg);
+    
+}
+
+.salty{
+    position: absolute;
+    width: 598px;
+    height: 598px;
+    left: 150px;
+    top: 149px;
+}
+
+.dirty{
+    position: absolute;
+    width: 521px;
+    height: 601px;
+    left: 420px;
+    top: 317px;
+
+}
+
+.fish1{
+    position: absolute;
+    width : 215px;
+    height : 147px;
+    left: 68.63%;
+    right: 8.82%;
+    top: 11.48%;
+    bottom: 74.91%;
+}
+
+.fish2{
+    position: absolute;
+    width: 211px;
+    height: 148px;
+    left: 382px;
+    top: 787px;
+
 }
