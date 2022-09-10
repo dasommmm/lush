@@ -15,6 +15,11 @@
 
 }
 
+/* html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+} */
+
 header{
     height: 36px;
     position: relative;
@@ -77,8 +82,18 @@ video{
 }
 
 section{
+    max-width: 100%;
+    /* padding: 0 350px; */
     margin: 0 350px;
+    /* 어떻게 해야할지 모르겟ㅆ어요
+    1920 1080에만 맞췄더니
+    조금이라도 화면 줄면 박살나요 
+    특히 이벤트는 1440만되도 박살나는데
+    반응형을 이때부터 해줘도 되나요*/
+
 }
+
+
 
 h2{
     font-family: 'Noto Sans', sans-serif;
@@ -93,6 +108,7 @@ h2{
 .product-wrapper{
     display: flex;
     align-items: center;
+    justify-content: center;
     margin-bottom: 250px;
 }
 
@@ -177,6 +193,7 @@ h3{
     align-items: center;
     border-radius: 50%;
     box-shadow: 13px 13px 14px rgba(0, 0, 0, 0.25);
+    z-index: 0;
 }
 
 .product-img:hover .circle>*{
@@ -198,7 +215,7 @@ h3{
     height: 335px;
     margin: 0 auto;
     transition: 0.5s;
-    position: relative;
+    /* position: relative; */
 
 }
 
@@ -206,9 +223,9 @@ h3{
     width: 341px;
     height: 305px;
     position: absolute;
-    top: -20px;
-    left: 450px;
-    /* z-index: -1; */
+    top: -5%;
+    left: 50%;
+    z-index: -1;
     transition: 0.5s;
     /* z-index로 위치 주는 법 말고는 없을까요 검정 원에도 z-index를 줘서
     겨우 맞췄어요ㅜㅜ 
@@ -225,9 +242,10 @@ h3{
     position: absolute;
     width: 354px;
     height: 343px;
-    top: -20px;
-    left: 100px;
+    top: -3%;
+    right: 50%;
     transition: 0.5s;
+    z-index: -1;
 }
 
 .mask-pro{
@@ -235,7 +253,6 @@ h3{
     height: 390px;
     margin: 0 auto;
     transition: 0.5s;
-    position: relative;
 }
 
 
@@ -251,21 +268,24 @@ h3{
     margin: 0 auto;
     width: 201px;
     height: 425px;
-    position: relative;
+    transition: 0.5s;
     /* 왜 여기 relative를 주면 
     sleepy-tex가 sleepy-pro뒤로 갈까요 */
 }
 
 .sleepy-tex{
     position: absolute;
-    top: -20px;
-    left: 450px;
+    top: -5%;
+    left: 50%;
+    z-index: -1;
+    transition: 0.5s;
 /* left를 700px하면 마치 뒤로 멀어지듯
 크기가 작아져는데 왜죠? */
 }
 
 .lush-event{
     margin: 0;
+    padding: 0;
 }
 
 /* 애네 마크업을 세로로 스크롤 내리면
@@ -297,10 +317,10 @@ h3{
 
 .move-wrapper{
     display: flex;
-    /* position: absolute; */
-    /* bottom: 300px; */
-    /* left: 160px; */
-    transform: translate(410px,600px);
+    position: absolute;
+    right: 100px;
+    top: 700px;
+    /* transform: translate(410px,600px); */
     letter-spacing: 1.5em;
     /* festa 글씨 위치를 어떻게 줘야할지
     각각 f e s t a 를 absolute해서 줘야할까요
@@ -319,7 +339,6 @@ h3{
 
 .event-title-wrapper{
     width: 394px;
-    height: 79px;
     margin-bottom: 72px;
 }
 
@@ -357,14 +376,14 @@ h3{
 
 .summer-img{
     background-image: url(../img/올여름bacl.svg);
-    
+    /* event1번과 event2번 이미지 사이에 흰색 줄같은 여백 없애는 방법 */
 }
 
 .salty{
     position: absolute;
     width: 598px;
     height: 598px;
-    left: 150px;
+    right: 210px;
     top: 149px;
 }
 
@@ -372,7 +391,7 @@ h3{
     position: absolute;
     width: 521px;
     height: 601px;
-    left: 420px;
+    right: 40px;
     top: 317px;
 
 }
@@ -381,17 +400,121 @@ h3{
     position: absolute;
     width : 215px;
     height : 147px;
-    left: 68.63%;
-    right: 8.82%;
-    top: 11.48%;
-    bottom: 74.91%;
+    right: 100px;
+    top: 130px;
 }
 
 .fish2{
     position: absolute;
     width: 211px;
     height: 148px;
-    left: 382px;
+    right: 430px;
     top: 787px;
 
 }
+
+.small-img-wrapper{
+    display: flex;
+    align-items: center;
+
+}
+
+.small-img-wrapper div{
+    margin-right: 50px;
+}
+
+.small-img-wrapper img{
+    border-radius: 50%;
+}
+
+.small-img-wrapper .small-title{
+    text-align: center;
+    margin-top: 15px;
+}
+
+.review-back{
+    background-image: url(../img/review-back1.svg);
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+
+}
+
+.be-the-best{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    font-family: 'Noto Sans';
+    font-weight: 900;
+    font-size: 110px;
+    width: 600px;
+
+}
+
+.be-the-best div:first-child{
+    display: flex;
+}
+
+.be-the div{
+    width: 290px;
+    height: 170px;
+    line-height: 170px;
+}
+
+.be-the{
+    margin-bottom: 23px;
+}
+
+.be{
+    background-color: #f5c701;
+    color: #F53F03;
+    margin-right: 20px;
+    
+}
+
+.the{
+    background-color: #0059D7;
+    color: #f5a7d2;
+
+}
+
+.be-the-best p{
+    text-align: center;
+    margin: 0 auto;
+}
+
+.best,.reviewer{
+    width: 600px;
+    height: 170px;
+    line-height: 170px;
+}
+
+.best{
+    background-color: #008A3A;
+    color: #F2C801;
+    margin-bottom: 23px;
+}
+
+.reviewer{
+    background-color: #F3A7D8;
+    color: #008A3A;
+}
+
+.download-back{
+    background-image: url(../img/download.svg);
+    /* 이미지 보여지는 부분 옮기는거 어떻게 하나요 */
+    background-position: left bottom;
+    position: relative;
+}
+
+.ball-move{
+    width: 500px;
+    height: 500px;
+    position: absolute;
+    right: 0;
+    top: 400px;
+    /* position absolute로 준 애들은
+    화면이 줄어들면 고정되어있어서
+    이상해져요ㅜㅜ 어떻게 고쳐줘야할까요 */
+}
+
