@@ -21,15 +21,16 @@
 } */
 
 header{
+    width: 100%;
     position: relative;
     /* margin: 20px 0; */
     padding: 20px 20px;
     /* 마진에 색을 넣으려면 안돼서 패딩으로 했는데
     마진에 색넣는 법?*/
-    /* position: fixed; */
+    position: fixed;
     /* fixed하면 space between이 안돼요ㅜㅜ */
     background-color: transparent;
-    /* box-sizing: border-box; */
+    box-sizing: border-box;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -87,7 +88,9 @@ video{
 
 section{
     max-width: 100%;
-    padding: 0 350px;
+    margin: 0 auto;
+    width: 1220px;
+    /* padding: 0 350px; */
     /* margin: 0 350px; 마진에 색을 못넣겠어유ㅠㅠ */
     /* 어떻게 해야할지 모르겟ㅆ어요
     1920 1080에만 맞췄더니
@@ -100,15 +103,16 @@ section{
 .best-seller{
     background-color: #f5f5f7;
 
+
 }
 
 
 h2{
-    font-family: 'Noto Sans', sans-serif;
+    font-family: 'Noto Sans kR', sans-serif;
     font-size: 94px;
     font-weight: 900;
     color: var(--green);
-    margin-top: 200px;
+    /* margin-top: 200px; */
     padding-top: 100px;
     margin-bottom: 200px;
     text-align: center;
@@ -119,6 +123,7 @@ h2{
     align-items: center;
     justify-content: center;
     margin-bottom: 250px;
+    gap: 80px;
 }
 
 
@@ -127,7 +132,7 @@ h2{
     flex-direction: column;
     flex-wrap: wrap;
     align-content: center;
-    flex-basis: 30%;
+    /* flex-basis: 30%; */
     color: var(--black2);
 }
 
@@ -176,7 +181,7 @@ h3{
 }
 
 .product-img{
-    flex-basis: 70%;
+    /* flex-basis: 70%; */
     display: flex;
     justify-content: center;
     position: relative;
@@ -189,7 +194,7 @@ h3{
     right: 0;
     bottom: 0;
     z-index: 2;
-    border-radius: 50%;
+
 /* a태그에 보더레디우스 괜찮은가요? */
 /* 아니면 position relative를 circle에는 못주겠죠? 부모가 아니라 자식이니까? */
 }
@@ -293,8 +298,9 @@ h3{
 }
 
 .lush-event{
-    margin: 0;
-    padding: 0;
+    width: 100%;
+    /* margin: 0;
+    padding: 0; */
     background-color: var(--white);
 }
 
@@ -528,4 +534,26 @@ h3{
     /* position absolute로 준 애들은
     화면이 줄어들면 고정되어있어서
     이상해져요ㅜㅜ 어떻게 고쳐줘야할까요 */
+}
+
+.lush-story{
+    width: 100vw;
+    
+}
+
+.we-believe-back{
+    height: 100vh;
+    background-image: url(../img/webelieve-back.svg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.we-believe-back h2{
+    color: var(--white);
+    margin: 0;
+    padding: 0;
+    width: 580px;
+    
+
 }
