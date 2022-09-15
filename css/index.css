@@ -75,6 +75,7 @@ header{
 .video-container{
     max-width: 100%;
     /* width: 100vw; */
+    position: relative;
 }
 
 video{
@@ -89,6 +90,21 @@ video{
 }
 
 /* https://homnay.tistory.com/10 */
+
+.video-letter{
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    max-width: 450px;
+    width: auto;
+    height: auto;
+    max-height: 100%;
+    margin: 0 auto;
+    margin-top: 13%;
+}
 
 section{
     max-width: 100%;
@@ -301,6 +317,7 @@ h3{
     left: 50%;
     z-index: -1;
     transition: 0.5s;
+    width: 300px;
 /* left를 700px하면 마치 뒤로 멀어지듯
 크기가 작아져는데 왜죠? */
 }
@@ -546,13 +563,15 @@ h3{
 
 .lush-story{
     width: 100vw;
+    flex-shrink: 0;
     
 }
 
 .we-believe{
     display: flex;
     flex-wrap: wrap;
-    width: 9000px;
+    width: 4500px;
+    background-color: var(--purple);
     /* transform: translateX(0px);
     transition: 2s; */
 }
@@ -566,8 +585,10 @@ h3{
     background-position: 50%;
     width: 100vw;
     background-repeat: no-repeat;
-    
+    background-color: white;
 }
+
+
 
 .we-believe-back h2{
     color: var(--white);
@@ -590,10 +611,11 @@ h3{
 .line{
     display: flex;
     flex-shrink: 0;
-    /* width: 1px; */
-    border-top: 1px solid var(--white);
+    align-items: center;
+    border-top: 2px solid var(--white);
     height: 736px;
-    gap: 20px;
+    gap: 120px;
+    margin-top: 130px;
 
 }
 
@@ -601,11 +623,77 @@ h3{
     width: 272px; 
     height: 224px;
     position: absolute;
+    top: -30%;
+    left: -20%;
 }
 
 .opacity-box{
     position: relative;
     flex-shrink: 0;
     width: 596px;
+    height: 475px;
     background-color: rgba(255,255,255, 0.25);
+    border-radius: 50px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
+
+.top{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* margin-top: 100px; */
+    gap: 25px;
+    height: 350px;
+}
+
+.bold{
+    font-size: 19px;
+    font-weight: 700;
+}
+
+.button-wrapper{
+    display: flex;
+    justify-content: center;
+    /* margin-bottom: 100px; */
+
+}
+
+.believe-text{
+    font-family: 'Noto Sans KR';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 141%;
+    color: var(--white);
+    width: 250px;
+}
+
+.fight-text p{
+    margin-bottom: 22px;
+}
+
+.vegan-text p{
+    margin-bottom: 22px;
+}
+
+.handmade-text p{
+    margin-bottom: 22px;
+}
+
+.white{
+    width: 138px;
+    height: 36px;
+    border-radius: 93px;
+    border: none;
+    background-color: var(--white);
+    font-family: 'Noto Sans KR', sans-serif;
+    color: var(--purple);
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
