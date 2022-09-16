@@ -73,8 +73,9 @@ header{
 }
 
 .video-container{
-    max-width: 100%;
+    /* max-width: 100%; */
     /* width: 100vw; */
+    height: 100vh;
     position: relative;
 }
 
@@ -87,6 +88,7 @@ video{
      이건 어떻게  해결할까요! 참고로 30초로 잘랐어요ㅜㅜ 
      */
      display: block;
+     object-fit: cover;
 }
 
 /* https://homnay.tistory.com/10 */
@@ -94,16 +96,12 @@ video{
 .video-letter{
     display: block;
     position: absolute;
-    top: 0;
-    right: 0;
-    left: 0;
-    bottom: 0;
-    max-width: 450px;
-    width: auto;
-    height: auto;
+    top: 50%;
+    left: 50%;
+    width: 22vw;
     max-height: 100%;
     margin: 0 auto;
-    margin-top: 13%;
+    transform: translate(-50%,-50%);
 }
 
 section{
@@ -570,7 +568,7 @@ h3{
 .we-believe{
     display: flex;
     flex-wrap: wrap;
-    width: 4500px;
+    width: max-content;
     background-color: var(--purple);
     /* transform: translateX(0px);
     transition: 2s; */
@@ -606,6 +604,7 @@ h3{
     height: 100vh;
     display: flex;
     align-items: center;
+    padding: 0 160px;
 }
 
 .line{
@@ -616,7 +615,7 @@ h3{
     height: 736px;
     gap: 120px;
     margin-top: 130px;
-
+    padding-left: 50px;
 }
 
 .logo-img{
