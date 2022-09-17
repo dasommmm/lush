@@ -136,7 +136,7 @@ h2{
     color: var(--green);
     /* margin-top: 200px; */
     padding-top: 200px;
-    margin-bottom: 150px;
+    padding-bottom: 150px;
     text-align: center;
 }
 
@@ -194,7 +194,7 @@ h3{
     font-size: 24px;
     font-weight: 400;
     cursor: pointer;
-    transition: 0.5s;
+    transition: 0.3s;
     /* margin: 0 auto; */
 }
 
@@ -320,46 +320,42 @@ h3{
 크기가 작아져는데 왜죠? */
 }
 
-.lush-event{
-    width: 100%;
-    /* margin: 0;
-    padding: 0; */
-    background-color: var(--white);
-}
-
-/* 애네 마크업을 세로로 스크롤 내리면
-사진 바뀌는걸로 하고싶은데 못했어요 알려주새요 */
-
 .lush-event h2{
     color: var(--purple);
+    background-color: var(--white);
 
 }
 
-.event-con{
+.section-inner-container{
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+
+.event-img-container{
+    width: 50%;
+    height: 100vh;
+    position: sticky;
+    top: 0;
 }
 
 .event-img{
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center center;
-    width: 950px;
-    /* width 950은 삭제해도 되나요? */
-    height: 1080px;
-    width: 50%;
-    position: relative;
+    height: 100vh;
+    width: 100%;
+    position: absolute;
 }
 
 .festa-img{
     background-image: url(../img/festa.svg);
+    background-position: center;
+    transition: 1s;
 }
 
 .move-wrapper{
     display: flex;
     position: absolute;
-    right: 100px;
-    top: 700px;
+    right: 10%;
+    top: 70%;
     /* transform: translate(410px,600px); */
     letter-spacing: 1.5em;
     /* festa 글씨 위치를 어떻게 줘야할지
@@ -371,113 +367,61 @@ h3{
     font-family: 'Noto Sans';
     font-style: normal;
     font-weight: 900;
-    font-size: 128px;
+    font-size: 8vw;
     color: var(--white);
     text-shadow: 7px 7px 5px rgba(0, 0, 0, 0.25);
     
 }
 
-.event-title-wrapper{
-    width: 394px;
-    margin-bottom: 72px;
-}
-
-.event-text{
-    width: 50%;
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    align-content: space-around;
-    justify-content: center;
-    background-color: var(--white);
-}
-
-.small-title{
-   font-family: Noto Sans KR;
-   font-weight: 700;
-   font-size: 36px;
-   margin-bottom: 36px;
-   color: var(--black2);
-}
-
-.event-description{
-   font-family: Noto Sans KR;
-   font-weight: 500;
-   font-size: 24px;
-   color: var(--black3);
-   letter-spacing: -0.03em;
-   line-height: 35px;
-   margin-bottom: 104px;
-}
-
-.event-text .more-black{
-    background-color: var(--black2);
-    margin: 0 auto;
-}
-
 .summer-img{
     background-image: url(../img/올여름bacl.svg);
+    background-position: left;
+    transition: 1s;
     /* event1번과 event2번 이미지 사이에 흰색 줄같은 여백 없애는 방법 */
 }
 
 .salty{
     position: absolute;
-    width: 598px;
-    height: 598px;
-    right: 210px;
-    top: 149px;
+    width: 59%;
+    height: 59%;
+    right: 21%;
+    top: 14%;
 }
 
 .dirty{
     position: absolute;
-    width: 521px;
-    height: 601px;
-    right: 40px;
-    top: 317px;
+    width: 52%;
+    height: 60%;
+    right: 0%;
+    top: 31%;
 
 }
 
 .fish1{
     position: absolute;
-    width : 215px;
-    height : 147px;
-    right: 100px;
-    top: 130px;
+    width : 20%;
+    height : 15%;
+    right: 10%;
+    top: 13%;
 }
 
 .fish2{
     position: absolute;
-    width: 211px;
-    height: 148px;
-    right: 430px;
-    top: 787px;
+    width: 20%;
+    height: 15%;
+    right: 43%;
+    top: 78%;
 
-}
-
-.small-img-wrapper{
-    display: flex;
-    align-items: center;
-
-}
-
-.small-img-wrapper div{
-    margin-right: 50px;
-}
-
-.small-img-wrapper img{
-    border-radius: 50%;
-}
-
-.small-img-wrapper .small-title{
-    text-align: center;
-    margin-top: 15px;
 }
 
 .review-back{
     background-image: url(../img/review-back1.svg);
+    background-position: bottom;
+    background-size: cover;
     display: flex;
     justify-content: flex-end;
     align-items: center;
+    transition: 1s;
 
 }
 
@@ -546,17 +490,94 @@ h3{
     /* 이미지 보여지는 부분 옮기는거 어떻게 하나요 */
     background-position: left bottom;
     position: relative;
+    transition: 1s;
 }
 
 .ball-move{
-    width: 500px;
-    height: 500px;
     position: absolute;
+    width: 50%;
+    height: 50%;
     right: 0;
-    top: 400px;
-    /* position absolute로 준 애들은
-    화면이 줄어들면 고정되어있어서
-    이상해져요ㅜㅜ 어떻게 고쳐줘야할까요 */
+    top: 40%;
+}
+
+
+.festa-img, .summer-img, .review-back{
+    display: none;
+}
+
+
+/* =================text======================== */
+.event-title-wrapper{
+    width: 394px;
+    margin-bottom: 72px;
+}
+
+.small-img-wrapper{
+    display: flex;
+    align-items: center;
+
+}
+
+.small-img-wrapper div{
+    margin-right: 50px;
+}
+
+.small-img-wrapper img{
+    border-radius: 50%;
+}
+
+.small-img-wrapper .small-title{
+    text-align: center;
+    margin-top: 15px;
+}
+
+.event-text{
+    height: 200vh;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: space-around;
+    justify-content: center;
+}
+
+
+.event-text .more-black{
+    background-color: var(--black2);
+    margin: 0 auto;
+}
+
+.event-text-wrapper{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: space-around;
+    justify-content: center;
+    background-color: var(--white);
+}
+
+.small-title{
+    font-family: Noto Sans KR;
+    font-weight: 700;
+    font-size: 36px;
+    margin-bottom: 36px;
+    color: var(--black2);
+ }
+
+ .event-description{
+    font-family: Noto Sans KR;
+    font-weight: 500;
+    font-size: 24px;
+    color: var(--black3);
+    letter-spacing: -0.03em;
+    line-height: 35px;
+    margin-bottom: 104px;
+ }
+
+ .event-text .more-black{
+    background-color: var(--black2);
+    margin: 0 auto;
 }
 
 .lush-story{
@@ -583,7 +604,7 @@ h3{
     background-position: 50%;
     width: 100vw;
     background-repeat: no-repeat;
-    background-color: white;
+    background-color: var(--white);
 }
 
 
@@ -693,6 +714,43 @@ h3{
     font-size: 16px;
     font-weight: 600;
     cursor: pointer;
-    transition: 0.5s;
+    transition: 0.3s;
 }
 
+.white:hover{
+    box-shadow: 3px 4px 5px rgba(0, 0, 0, 0.3);
+}
+
+.spa{
+    width: 1920px;
+    height: 100vh;
+    /* overflow: hidden; */
+    background-color: var(--white);
+}
+
+.spa-container{
+    display: flex;
+    flex-direction: row;
+    /* transition: 1s; */
+}
+
+.black-container{
+    width: 1920px;
+    height: 80vh;
+    flex-shrink: 0;
+    bottom: 0;
+    background-color: var(--black);
+    transform: translateY(25%);
+    position: relative;
+}
+
+.arrow-right,.arrow-left{
+    width: 187px;
+    height: 187px;
+    position: absolute;
+}
+
+.spa1-img{
+    width: 805px;
+    height: 597px;
+}
