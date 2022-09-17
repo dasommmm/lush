@@ -722,7 +722,7 @@ h3{
 }
 
 .spa{
-    width: 1920px;
+    /* width: 100%; */
     height: 100vh;
     /* overflow: hidden; */
     background-color: var(--white);
@@ -735,22 +735,143 @@ h3{
 }
 
 .black-container{
-    width: 1920px;
+    width: 100vw;
     height: 80vh;
     flex-shrink: 0;
     bottom: 0;
     background-color: var(--black);
-    transform: translateY(25%);
+    transform: translateY(25.1%);
     position: relative;
 }
 
 .arrow-right,.arrow-left{
-    width: 187px;
-    height: 187px;
+    width: 10%;
+    height: 10%;
     position: absolute;
+    top: 30%;
+    transform: translatey(-30%);
+    
 }
 
-.spa1-img{
-    width: 805px;
-    height: 597px;
+.arrow-right{
+    right:0;
+
 }
+
+.top-spa{
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    align-items: center;
+    justify-content: space-between;   
+    transform: translateY(-20%);
+    width: 1220px;
+
+}
+
+
+.top-spa div{
+    flex-shrink: 0;
+    font-family: 'Noto Sans KR', sans-serif;
+    color: var(--white);
+    text-align: center;
+}
+
+.spa-name{
+    font-size: 50px;
+    font-weight: 900;
+    margin-bottom: 34px;
+    
+}
+
+.spa-small-title{
+    font-size: 24px;
+    font-weight: 400;
+    margin-bottom: 24px;
+
+}
+
+.tag{
+    font-size: 16px;
+    font-weight: 400;
+    margin-bottom: 36px;
+
+}
+
+
+.green-button{
+    width: 180px;
+    height: 48px;
+    border-radius: 93px;
+    border: none;
+    background-color: var(--green);
+    font-family: 'Noto Sans KR', sans-serif;
+    color: var(--white);
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 48px;
+    cursor: pointer;
+    transition: 0.3s;
+
+}
+
+.green-button:hover{
+    box-shadow: 4px 5px 6px rgba(110, 110, 110, 0.4);
+    /* transform: scale(1.05); */
+}
+
+.spa-icon{
+    width: 64px;
+    height: 64px;
+}
+
+.bottom-spa{
+    display: flex;
+    width: 1220px;
+    margin: 0 auto;
+    justify-content: space-between;
+    transform: translateY(-20%);
+
+}
+
+.bottom-spa>div{
+    display: flex;
+}
+
+.spa-des{
+    color: var(--white);
+    font-family: 'Noto Sans KR';
+    margin-left: 10px;
+}
+
+.spa-des-title{
+    font-weight: 700;
+    font-size: 24px;
+    margin-bottom: 23px;
+}
+
+.spa-des-small{
+    font-weight: 500;
+    font-size: 16px;
+    margin-bottom: 12px;
+    line-height: 22px;
+}
+
+footer{
+    background-color: rgba(34, 34, 34, 0.98);
+
+}
+/* footer위에 흰 선? */
+
+.logo-white{
+    width: 84px;
+    height: 38px;
+}
+
+.icon-box figure{
+    width: 32px;
+    height: 32px;
+}
+
+
+/* ===================sticky 부분 1920 1080이상해요 */
