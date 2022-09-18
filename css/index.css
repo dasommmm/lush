@@ -390,9 +390,9 @@ h3{
 
 .dirty{
     position: absolute;
-    width: 52%;
+    width: 54%;
     height: 60%;
-    right: 0%;
+    right: 2%;
     top: 31%;
 
 }
@@ -744,18 +744,29 @@ h3{
     position: relative;
 }
 
-.arrow-right,.arrow-left{
-    width: 10%;
-    height: 10%;
-    position: absolute;
-    top: 30%;
-    transform: translatey(-30%);
+.arrow-right img,.arrow-left img{
+    width: 50%;
+    height: 50%;
     
 }
 
-.arrow-right{
-    right:0;
+.arrow-right,.arrow-left{
+    position: absolute;
+    top: 30%;
+    transform: translatey(-30%);
+    margin: 0;
 
+}
+
+
+.arrow-right{
+    right:-64px;
+
+
+}
+
+.arrow-left{
+    left: 0;
 }
 
 .top-spa{
@@ -763,10 +774,14 @@ h3{
     justify-content: center;
     margin: 0 auto;
     align-items: center;
-    justify-content: space-between;   
+    justify-content: center;   
     transform: translateY(-20%);
-    width: 1220px;
+    max-width: 1220px;
 
+}
+
+.top-spa img{
+    width: 90%;
 }
 
 
@@ -827,9 +842,9 @@ h3{
 
 .bottom-spa{
     display: flex;
-    width: 1220px;
+    max-width: 1220px;
     margin: 0 auto;
-    justify-content: space-between;
+    justify-content: space-around;
     transform: translateY(-20%);
 
 }
@@ -860,12 +875,13 @@ h3{
 footer{
     background-color: rgba(34, 34, 34, 0.98);
     padding:  150px 0 ;
+    padding: 0 20px;
 
 }
 /* footer위에 흰 선? */
 
 .footer-con{
-    width: 1220px;
+    max-width: 1220px;
     margin: 0 auto;
     padding: 55px 0 ;
     border-top: 2px solid var(--green);
@@ -895,7 +911,6 @@ footer{
 
 .icon-box{
     display: flex;
-    flex-shrink: 0;
     /* margin-right: 10px; */
 }
 
@@ -903,13 +918,16 @@ footer{
     display: block;
     width: 100%;
     height: 100%;
-    color: #000000;
+    /* color: #000000; */
+    flex-grow: 0;
+    width: 32px;
+    height: 32px;
+    margin-right: 10px;
 }
 
 .icon-box figure{
     width: 32px;
     height: 32px;
-    margin-right: 10px;
 }
 
 .subscribe{
@@ -923,7 +941,7 @@ footer{
     padding-bottom: 6px;
 }
 
-.purple{
+.purple-button{
     width: 82px;
     height: 23px;
     border-radius: 93px;
@@ -968,11 +986,135 @@ footer{
     display: block;
 }
 
+.right{
+    max-width: 460px;
+}
+
+nav a{
+    margin-right: 36px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 23px;
+    color: var(--white);
+}
+
+.nav-one{
+    margin-bottom: 6px;
+}
+
+
+.right-top{
+    margin-bottom: 36px;
+    display: flex;
+    flex-direction: column;
+}
+
+
+.right-bottom{
+    display: flex;
+    gap: 52px;
+    color: var(--white);
+}
+
+h4{
+    font-size: 16px;
+    line-height: 23px;
+}
+
+.right-bottom p{
+    font-weight: 500;
+    font-size: 12px;
+    margin-top: 7px;
+}
 
 .footer-bottom{
-    width: 1220px;
+    font-family: 'Noto Sans KR';
+    max-width: 1220px;
     margin: 0 auto;
-    padding-top: 55px;
+    padding-top: 30px;
+    color: var(--white);
+    font-size: 10px;
+}
+
+.adress{
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 15px;
+}
+
+.copyright{
+    font-weight: 700;
+    padding-bottom: 100px;
 }
 /* ===================sticky 부분 1920 1080이상해요 */
 /* 위아래로 화면이 작아지면 푸터가 넘쳐서 위에랑 겹쳐요 */
+
+
+@media screen and (max-width:1239px){
+    .product-wrapper{
+        flex-direction: column-reverse;
+    }
+
+    .we-believe{
+        display: flex;
+        flex-wrap: wrap;
+        /* width: max-content; */
+        background-color: var(--purple);
+        /* transform: translateX(0px);
+        transition: 2s; */
+        flex-direction: column;
+    }
+
+    .we-believe-back{
+        /* width: 100%; */
+        /* right: 0; */
+    }
+
+    .long-container{
+        height: 100%;
+        display: block;
+        padding-bottom: 150px;
+        /* width: 100%; */
+    }
+
+    .line{
+        flex-direction: column;
+        height: 100%;
+        padding: 150px 0;
+        border-bottom: 2px solid var(--white);
+    }
+
+    .white{
+        height: 39px;
+    }
+
+    /* ============ */
+
+    .top-spa{
+        flex-direction: column;
+    }
+    
+    .top-spa img{
+        width: 66%;
+        margin: 0 auto;
+
+    }
+
+    .spa-name-container{
+        display: flex;
+        align-items: center;
+        margin-top: 48px;
+        gap: 30px;
+
+    }
+
+    .bottom-spa{
+        flex-direction: column;
+    }
+
+    .footer-top{
+        flex-direction: column;
+        gap: 20px;
+    }
+
+}
