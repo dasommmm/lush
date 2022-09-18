@@ -859,19 +859,120 @@ h3{
 
 footer{
     background-color: rgba(34, 34, 34, 0.98);
+    padding:  150px 0 ;
 
 }
 /* footer위에 흰 선? */
 
+.footer-con{
+    width: 1220px;
+    margin: 0 auto;
+    padding: 55px 0 ;
+    border-top: 2px solid var(--green);
+    border-bottom: 2px solid var(--green);
+    font-family: 'Noto Sans KR';
+}
+
 .logo-white{
+    display: inline-block;
+}
+
+.logo-white figure{
     width: 84px;
     height: 38px;
+    margin-bottom: 32px;
+
+}
+
+.footer-top{
+    display: flex;
+    justify-content: space-between;
+}
+
+.left{
+
+}
+
+.icon-box{
+    display: flex;
+    flex-shrink: 0;
+    /* margin-right: 10px; */
+}
+
+.icon-box a{
+    display: block;
+    width: 100%;
+    height: 100%;
+    color: #000000;
 }
 
 .icon-box figure{
     width: 32px;
     height: 32px;
+    margin-right: 10px;
+}
+
+.subscribe{
+    color: var(--white);
+    font-weight: 700;
+    font-size: 13px;
+    line-height: 19px;
+}
+
+.subscribe p{
+    padding-bottom: 6px;
+}
+
+.purple{
+    width: 82px;
+    height: 23px;
+    border-radius: 93px;
+    border: none;
+    background-color: var(--purple);
+    color: var(--white);
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 23px;
+    cursor: pointer;
+    transition: 0.3s;
+    margin-bottom: 16px;
+}
+
+.notice{
+    margin-bottom: 16px;
+}
+
+.notice div{
+    display: flex;
+    padding-bottom: 6px;
+}
+
+.notice p:first-of-type{
+    color: var(--white);
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 17px;
+}
+
+.under-line{
+    text-decoration: underline;
+}
+
+.notice a{
+    font-weight: 400;
+    font-size: 10px;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 17px;
+    color: rgba(254, 254, 253, 0.9);
+    display: block;
 }
 
 
+.footer-bottom{
+    width: 1220px;
+    margin: 0 auto;
+    padding-top: 55px;
+}
 /* ===================sticky 부분 1920 1080이상해요 */
+/* 위아래로 화면이 작아지면 푸터가 넘쳐서 위에랑 겹쳐요 */
