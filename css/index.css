@@ -156,6 +156,7 @@ h2{
     align-content: center;
     /* flex-basis: 30%; */
     color: var(--black2);
+    te
 }
 
 h3{
@@ -626,6 +627,8 @@ h3{
     display: flex;
     align-items: center;
     padding: 0 160px;
+    min-height: 700px;
+
 }
 
 .line{
@@ -723,9 +726,12 @@ h3{
 
 .spa{
     /* width: 100%; */
-    height: 100vh;
+    /* height: 80vh; */
     /* overflow: hidden; */
     background-color: var(--white);
+    padding-top: 20vh;
+    /* box-sizing: border-box; */
+    /* min-height: 700px; */
 }
 
 .spa-container{
@@ -736,12 +742,14 @@ h3{
 
 .black-container{
     width: 100vw;
-    height: 80vh;
+    /* height: 80%; */
+    /* padding-top: 20vh; */
     flex-shrink: 0;
     bottom: 0;
     background-color: var(--black);
-    transform: translateY(25.1%);
+    /* transform: translateY(25.1%); */
     position: relative;
+    /* padding-top: 20vh; */
 }
 
 .arrow-right img,.arrow-left img{
@@ -775,9 +783,13 @@ h3{
     margin: 0 auto;
     align-items: center;
     justify-content: center;   
-    transform: translateY(-20%);
+    /* transform: translateY(-20%); */
     max-width: 1220px;
 
+}
+
+.top-spa figure{
+    transform: translateY(-20%);
 }
 
 .top-spa img{
@@ -845,7 +857,8 @@ h3{
     max-width: 1220px;
     margin: 0 auto;
     justify-content: space-around;
-    transform: translateY(-20%);
+    /* transform: translateY(-20%); */
+    padding-bottom: 20px;
 
 }
 
@@ -856,26 +869,26 @@ h3{
 .spa-des{
     color: var(--white);
     font-family: 'Noto Sans KR';
-    margin-left: 10px;
+    margin-left: 26px;
 }
 
 .spa-des-title{
     font-weight: 700;
     font-size: 24px;
-    margin-bottom: 23px;
+    margin-bottom: 16px;
 }
 
 .spa-des-small{
     font-weight: 500;
     font-size: 16px;
-    margin-bottom: 12px;
+    margin-bottom: 7px;
     line-height: 22px;
 }
 
 footer{
     background-color: rgba(34, 34, 34, 0.98);
     padding:  150px 0 ;
-    padding: 0 20px;
+    padding: 70px 30px;
 
 }
 /* footer위에 흰 선? */
@@ -883,7 +896,7 @@ footer{
 .footer-con{
     max-width: 1220px;
     margin: 0 auto;
-    padding: 55px 0 ;
+    padding: 70px 0 ;
     border-top: 2px solid var(--green);
     border-bottom: 2px solid var(--green);
     font-family: 'Noto Sans KR';
@@ -905,9 +918,6 @@ footer{
     justify-content: space-between;
 }
 
-.left{
-
-}
 
 .icon-box{
     display: flex;
@@ -1055,6 +1065,11 @@ h4{
         flex-direction: column-reverse;
     }
 
+    .product-text-container{
+        align-items: center;
+        text-align: center;
+    }
+
     .we-believe{
         display: flex;
         flex-wrap: wrap;
@@ -1095,7 +1110,7 @@ h4{
     }
     
     .top-spa img{
-        width: 66%;
+        width: 70%;
         margin: 0 auto;
 
     }
@@ -1103,13 +1118,17 @@ h4{
     .spa-name-container{
         display: flex;
         align-items: center;
-        margin-top: 48px;
+        /* margin-top: 48px; */
         gap: 30px;
 
     }
 
     .bottom-spa{
         flex-direction: column;
+        width: 500px;
+        padding-top: 76px;
+        gap: 40px;
+        /* display: inline-; */
     }
 
     .footer-top{
