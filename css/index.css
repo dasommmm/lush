@@ -347,13 +347,14 @@ h3{
     position: absolute;
     min-height: 20vh;
     overflow: hidden;
+    background-size: cover;
+    transition: 0.2s;
     
 }
 
 .festa-img{
     background-image: url(../image/festa-bac.png);
     background-position: center;
-    transition: 1s;
 }
 
 .move-wrapper{
@@ -386,7 +387,6 @@ h3{
 .summer-img{
     background-image: url(../image/summer-bac.png);
     background-position: left;
-    transition: 1s;
     /* event1번과 event2번 이미지 사이에 흰색 줄같은 여백 없애는 방법 */
 }
 
@@ -428,7 +428,7 @@ h3{
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    transition: 1s;
+
 
 }
 
@@ -497,13 +497,11 @@ h3{
     /* 이미지 보여지는 부분 옮기는거 어떻게 하나요 */
     background-position: left bottom;
     position: relative;
-    transition: 1s;
 }
 
 .ball-move{
     position: absolute;
     width: 50%;
-    height: 50%;
     right: 0;
     top: 40%;
 }
@@ -563,7 +561,7 @@ h3{
     flex-wrap: wrap;
     align-content: space-around;
     justify-content: center;
-    /* background-color: var(--white); */
+    background-color: var(--white);
 }
 
 .small-title{
@@ -1069,9 +1067,20 @@ h4{
 
 
 @media screen and (max-width:1239px){
+    .best-wrapper{
+        width: fit-content;
+    }
+
+    .product{
+        padding: 0 32px;
+
+    }
+    
     .product-wrapper{
         flex-direction: column-reverse;
+        
     }
+    
 
     .product-text-container{
         align-items: center;
@@ -1091,12 +1100,10 @@ h4{
     .event-text-wrapper{
         width: 100%;
         position: relative;
-        background-color: none;
+        background-color: transparent;
     }
 
-    .event-text{
-        background-color: ;
-    }
+
 
     .we-believe{
         display: flex;

@@ -8,9 +8,22 @@ window.addEventListener('mousewheel', (e)=> {
     }
 })
 
-const eventText = document.getElementsByClassName('event-text');
-window.addEventListener('scroll',()=>{
-    console.log(eventText[1].getBoundingClientRect().top)
-    //1000가까이 됐을때 사진 opacity1
-})
 
+
+const eventText = document.getElementsByClassName('event-text');
+const eventImg =document.getElementsByClassName('event-img');
+
+for(let i=0; i< eventText.length; i++){
+
+    window.addEventListener('scroll',()=>{
+        console.log(eventText[1].getBoundingClientRect().top)
+        //1000가까이 됐을때 사진 opacity1
+        if(eventText[i].getBoundingClientRect().top - window.innerHeight < 0){
+            eventImg[i].classList.remove('event-opacity')
+        }else(
+            eventImg[i].classList.add('event-opacity')
+        )
+    })
+}
+
+// - window.innerHeight
