@@ -345,6 +345,9 @@ h3{
     height: 100vh;
     width: 100%;
     position: absolute;
+    min-height: 20vh;
+    overflow: hidden;
+    
 }
 
 .festa-img{
@@ -375,6 +378,11 @@ h3{
     
 }
 
+.summer-product{
+    position: relative;
+    height: 100vh;
+}
+
 .summer-img{
     background-image: url(../image/summer-bac.png);
     background-position: left;
@@ -385,15 +393,13 @@ h3{
 .salty{
     position: absolute;
     width: 37%;
-    /* height: 68%; */
     right: 34%;
-    top: 15%;
+    top: 23%;
 }
 
 .dirty{
     position: absolute;
     width: 42%;
-    /* height: 60%; */
     right: 0%;
     top: 39%;
 
@@ -402,16 +408,15 @@ h3{
 .fish1{
     position: absolute;
     width : 20%;
-    height : 15%;
-    right: 10%;
-    top: 13%;
+    right: 15%;
+    top: 22%;
 }
 
 .fish2{
     position: absolute;
     width: 20%;
-    height: 15%;
-    right: 43%;
+    /* height: 15%; */
+    right: 37%;
     top: 78%;
 
 }
@@ -558,7 +563,7 @@ h3{
     flex-wrap: wrap;
     align-content: space-around;
     justify-content: center;
-    background-color: var(--white);
+    /* background-color: var(--white); */
 }
 
 .small-title{
@@ -756,8 +761,8 @@ h3{
 }
 
 .arrow-right img,.arrow-left img{
-    width: 50%;
-    height: 50%;
+    width: 60px;
+    height: 60px;
     
 }
 
@@ -771,13 +776,13 @@ h3{
 
 
 .arrow-right{
-    right:-64px;
+    right:30px;
 
 
 }
 
 .arrow-left{
-    left: 0;
+    left: 10px;
 }
 
 .top-spa{
