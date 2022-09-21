@@ -26,4 +26,34 @@ for(let i=0; i< eventText.length; i++){
     })
 }
 
-// - window.innerHeight
+
+const slidWrapper = document.querySelector(`.slid-wrapper`);
+const buttons = document.querySelector(`.arrow`);
+const prevButton = buttons[0];
+const nextButton = buttons[1];
+
+let 이동거리 = 0;
+const 슬라이드너비 = document.querySelector('.slider').clientWidth;
+
+nextButton.addEventListener("click",()=>{
+    if(이동거리 === 슬라이드너비 * (slidWrapper.childElementCount-1)){
+        이동거리 = 0;
+    }else{
+        이동거리 = 이동거리 + 슬라이드너비;
+    }
+    slidWrapper.style.transform = `translateX(-${이동거리}px)`;
+});
+
+prevButton.addEventListener("click",()=>{
+    if(이동거리===0){
+        이동거리 = 슬라이드너비*(slidWrapper.childElementCount-1);
+    }else{
+        이동거리 = 이동거리 + 슬라이드너비;
+    }
+    slidWrapper.style.transform = `translateX(-${이동거리}px)`;
+});
+
+
+
+
+// https://github.com/venty1993/test
