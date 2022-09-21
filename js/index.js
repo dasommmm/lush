@@ -11,24 +11,30 @@ window.addEventListener('mousewheel', (e)=> {
 
 
 const eventText = document.getElementsByClassName('event-text');
-const eventImg =document.getElementsByClassName('event-img');
+const eventImg = document.getElementsByClassName('event-img');
 
 for(let i=0; i< eventText.length; i++){
 
     window.addEventListener('scroll',()=>{
-        console.log(eventText[1].getBoundingClientRect().top)
+        // console.log(eventText[1].getBoundingClientRect().top)
         //1000가까이 됐을때 사진 opacity1
         if(eventText[i].getBoundingClientRect().top - window.innerHeight < 0){
-            eventImg[i].classList.remove('event-opacity')
-        }else(
-            eventImg[i].classList.add('event-opacity')
-        )
+            eventImg[i].classList.remove('event-opacity');
+        }else{
+            if(i!==0){
+                eventImg[i].classList.add('event-opacity');
+            }
+
+        }
+        
     })
 }
 
 
 const slidWrapper = document.querySelector(`.slid-wrapper`);
 const buttons = document.querySelector(`.arrow`);
+const black = getElementsByClassName(`.black-container`).length;
+
 const prevButton = buttons[0];
 const nextButton = buttons[1];
 
@@ -36,7 +42,7 @@ let 이동거리 = 0;
 const 슬라이드너비 = document.querySelector('.slider').clientWidth;
 
 nextButton.addEventListener("click",()=>{
-    if(이동거리 === 슬라이드너비 * (slidWrapper.childElementCount-1)){
+    if(이동거리 === 슬라이드너비 * (black-1)){
         이동거리 = 0;
     }else{
         이동거리 = 이동거리 + 슬라이드너비;
@@ -46,11 +52,11 @@ nextButton.addEventListener("click",()=>{
 
 prevButton.addEventListener("click",()=>{
     if(이동거리===0){
-        이동거리 = 슬라이드너비*(slidWrapper.childElementCount-1);
+        이동거리 = 슬라이드너비*(black-1);
     }else{
-        이동거리 = 이동거리 + 슬라이드너비;
+        이동거리 = 이동거리 - 슬라이드너비;
     }
-    slidWrapper.style.transform = `translateX(-${이동거리}px)`;
+    slidWrapper.style.transform = `translateX(-${이동거리}px)`
 });
 
 
