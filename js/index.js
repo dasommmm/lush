@@ -42,32 +42,37 @@ for(let i=0; i< eventText.length; i++){
 // ====
 
 const slidWrapper = document.querySelector(`.slid-wrapper`);
-const black = document.getElementsByClassName(`.black-container`).length;
+const black = document.getElementsByClassName(`black-container`).length;
 const prevButton = document.querySelector(`.arrow-left`);
 const nextButton = document.querySelector(`.arrow-right`);
 
-let 이동거리 = 0;
+let index = 0;
 // const 슬라이드너비 = window.innerWidth;
 // const 슬라이드너비 = document.black.clientWidth;
-const 슬라이드너비 = document.querySelector(`.slider`).clientWidth;
+const sliderContainer = document.querySelector(`.slider`);
+const 슬라이드너비 = sliderContainer.clientWidth;
+
+window.addEventListener('resize',()=>{
+    슬라이드너비 = sliderContainer.clientWidth;
+});
 
 
 nextButton.addEventListener("click",()=>{
-    if(이동거리 === (black-1)){
-        이동거리 = 0;
+    if(index === (black-1)){
+        index = 0;
     }else{
-        이동거리 = 이동거리 + 슬라이드너비;
+        index++;
     }
-    slidWrapper.style.transform = `translateX(-${이동거리}px)`;
+    slidWrapper.style.transform = `translateX(-${슬라이드너비*index}px)`;
 });
 
 prevButton.addEventListener("click",()=>{
-    if(이동거리===0){
-        이동거리 = (black-1);
+    if(index===0){
+        index = (black-1);
     }else{
-        이동거리 = 이동거리 - 슬라이드너비;
+        index--;
     }
-    slidWrapper.style.transform = `translateX(-${이동거리}px)`
+    slidWrapper.style.transform = `translateX(-${슬라이드너비*index}px)`
 });
 
 
