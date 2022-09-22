@@ -9,7 +9,6 @@ window.addEventListener('mousewheel', (e)=> {
 })
 
 
-
 const eventText = document.getElementsByClassName('event-text');
 const eventImg = document.getElementsByClassName('event-img');
 
@@ -30,19 +29,31 @@ for(let i=0; i< eventText.length; i++){
     })
 }
 
+// ====
+
+
+
+
+
+
+
+
+
+// ====
 
 const slidWrapper = document.querySelector(`.slid-wrapper`);
-const buttons = document.querySelector(`.arrow`);
-const black = getElementsByClassName(`.black-container`).length;
-
-const prevButton = buttons[0];
-const nextButton = buttons[1];
+const black = document.getElementsByClassName(`.black-container`).length;
+const prevButton = document.querySelector(`.arrow-left`);
+const nextButton = document.querySelector(`.arrow-right`);
 
 let 이동거리 = 0;
-const 슬라이드너비 = document.querySelector('.slider').clientWidth;
+// const 슬라이드너비 = window.innerWidth;
+// const 슬라이드너비 = document.black.clientWidth;
+const 슬라이드너비 = document.querySelector(`.slider`).clientWidth;
+
 
 nextButton.addEventListener("click",()=>{
-    if(이동거리 === 슬라이드너비 * (black-1)){
+    if(이동거리 === (black-1)){
         이동거리 = 0;
     }else{
         이동거리 = 이동거리 + 슬라이드너비;
@@ -52,7 +63,7 @@ nextButton.addEventListener("click",()=>{
 
 prevButton.addEventListener("click",()=>{
     if(이동거리===0){
-        이동거리 = 슬라이드너비*(black-1);
+        이동거리 = (black-1);
     }else{
         이동거리 = 이동거리 - 슬라이드너비;
     }

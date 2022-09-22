@@ -590,7 +590,7 @@ h3{
 .lush-story{
     width: 100vw;
     flex-shrink: 0;
-    
+    overflow: hidden;
 }
 
 .we-believe{
@@ -738,6 +738,7 @@ h3{
     padding-top: 20%;
     box-sizing: border-box;
     /* min-height: 700px; */
+    position: relative;
 }
 
 .slider{
@@ -757,19 +758,33 @@ h3{
 }
 
 .black-container{
-    width: 100vw;
+    width: calc(100vw - 17px);
     /* height: 80%; */
     /* padding-top: 20vh; */
     flex-shrink: 0;
     bottom: 0;
     background-color: var(--black);
     /* transform: translateY(25.1%); */
-    position: relative;
     /* padding-top: 20vh; */
+}
+
+
+.spa-buttons{
+    position: absolute;
+    width: 100vw;
+    top: 50%;
+    left: 0;
+    height: 50px;
+    z-index: 1;
 }
 
 .arrow{
     cursor: pointer;
+    position: absolute;
+    top: 30%;
+    transform: translatey(-50%);
+    margin: 0;
+
 }
 
 .arrow img{
@@ -778,18 +793,9 @@ h3{
     
 }
 
-.arrow-right,.arrow-left{
-    position: absolute;
-    top: 30%;
-    transform: translatey(-30%);
-    margin: 0;
-
-}
-
 
 .arrow-right{
-    right:30px;
-
+    right:10px;
 
 }
 
