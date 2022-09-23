@@ -408,6 +408,7 @@ h3{
 .fish1{
     position: absolute;
     width : 20%;
+    height: 15%;
     right: 15%;
     top: 22%;
 }
@@ -415,7 +416,7 @@ h3{
 .fish2{
     position: absolute;
     width: 20%;
-    /* height: 15%; */
+    height: 15%;
     right: 37%;
     top: 78%;
 
