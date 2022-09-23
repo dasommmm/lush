@@ -603,6 +603,16 @@ h3{
     transition: 2s; */
 }
 
+.screen-block{
+    position: absolute;
+    z-index: 5;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+}
+
 .we-believe-back{
     height: 100vh;
     background-image: url(../image/webelieve-back.svg);
@@ -688,6 +698,8 @@ h3{
     display: flex;
     justify-content: center;
     /* margin-bottom: 100px; */
+    z-index: 10;
+    position: relative;
 
 }
 

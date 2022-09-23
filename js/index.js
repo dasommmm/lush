@@ -97,3 +97,4 @@ prevButton.addEventListener("click",()=>{
 
 
 // https://github.com/venty1993/test
+// 마우스 업은 마우스 뗀거
