@@ -50,7 +50,7 @@ function dragSection() {
         return false;
     }
 
-    
+    //dragSectionEvent가 이해가 안가무ㅜ 질문!!!!!!!!!!!!!!!!!!!!!!!!!?
 
     rect.addEventListener('mousedown', dragSectionEvent);
     
@@ -112,6 +112,7 @@ function makeSlide(){
     // const 슬라이드너비 = document.black.clientWidth;
     const sliderContainer = document.querySelector(`.slider`);
     let 슬라이드너비 = sliderContainer.clientWidth;
+    //let은 변할 수 있는 값 넣을때
 
     window.addEventListener('resize',()=>{
         슬라이드너비 = sliderContainer.clientWidth;
