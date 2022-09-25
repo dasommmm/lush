@@ -1,7 +1,9 @@
 scrollHeader();
 stickySection();
 dragSection();
-makeSlide()
+makeSlide();
+
+
 
 
 
@@ -56,7 +58,8 @@ function dragSection(){
 
 
     rect.addEventListener('mousedown', dragSectionEvent);
-    
+    makeCursor();
+
     window.addEventListener('resize', ()=>{
         rect.style.transform = `translateX(0px)`
         console.log(`translate 값 초기화`)
@@ -68,6 +71,8 @@ function dragSection(){
         }
         console.log(`리사이즈 이벤트 종료`)
     })
+
+    //dragSectionEvent가 이해가 안가무ㅜ 질문!!!!!!!!!!!!!!!!!!!!!!!!!?
 
     function dragSectionEvent(e){
         const rectLocation = rect.getBoundingClientRect();
@@ -94,8 +99,30 @@ function dragSection(){
         }
     
     }
+    function makeCursor(){
+        const cursorRect = document.querySelector('.cursor-rect')
+        
+        rect.addEventListener('mousemove',(e)=>{
+            cursorRect.style.top = `${e.pageY}px`
+            cursorRect.style.left = `${e.pageX}px`
+    
+        })
+    }
+
     
 }
+
+//====
+
+// function makeCursor(){
+//     const cursorRect = document.querySelector('.cursor-rect')
+    
+//     window.addEventListener('mousemove',(e)=>{
+//         cursorRect.style.top = `${e.pageY}px`
+//         cursorRect.style.left = `${e.pageX}px`
+
+//     })
+// }
 
 // ====
 

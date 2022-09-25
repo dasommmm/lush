@@ -592,6 +592,29 @@ h3{
     width: 100vw;
     flex-shrink: 0;
     overflow: hidden;
+    cursor: none;
+}
+
+.cursor-rect{
+    position: absolute;
+    top: -100px;
+    left: -100px;
+    z-index: 12;
+}
+
+.spin{
+    width: 100px;
+    height: 100px;
+    animation: spinspin 10s infinite;
+}
+
+@keyframes spinspin {
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(350deg);
+    }
 }
 
 .we-believe{
@@ -741,6 +764,7 @@ h3{
 
 .white:hover{
     box-shadow: 3px 4px 5px rgba(0, 0, 0, 0.3);
+    
 }
 
 .spa{

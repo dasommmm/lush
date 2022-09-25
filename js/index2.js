@@ -50,7 +50,6 @@ function dragSection() {
         return false;
     }
 
-    //dragSectionEvent가 이해가 안가무ㅜ 질문!!!!!!!!!!!!!!!!!!!!!!!!!?
 
     rect.addEventListener('mousedown', dragSectionEvent);
     
