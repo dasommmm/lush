@@ -52,13 +52,14 @@ function stickySection(){
 function dragSection(){
 
     const rect = document.getElementsByClassName('we-believe')[0];
+    const block = document.getElementsByClassName('screen-block')[0];
 
     document.getElementsByClassName('lush-story').ondragstart = ()=>{
         return false;
     }
 
 
-    rect.addEventListener('mousedown', dragSectionEvent);
+    block.addEventListener('mousedown', dragSectionEvent);
     makeCursor();
 
     window.addEventListener('resize', ()=>{
@@ -90,8 +91,8 @@ function dragSection(){
             if(rectLocation.x+nowX-startX>0){
                 console.log(`왼쪽이동 정지`)
                 rect.style.transform = `translateX(0px)`
-            }else if(rectLocation.x+nowX-startX<(rect.clientWidth-window.innerWidth)*-1){
-                rect.style.transform = `translateX(${rect.clientWidth-window.innerWidth})`
+            }else if(rectLocation.x+nowX-startX<(block.clientWidth-window.innerWidth)*-1){
+                rect.style.transform = `translateX(${block.clientWidth-window.innerWidth})`
                 console.log(`오른쪽 이동 정지`)
             }
             else{
@@ -104,7 +105,7 @@ function dragSection(){
         const cursorRect = document.querySelector('.cursor-rect')
         
         rect.addEventListener('mousemove',(e)=>{
-            cursorRect.style.top = `${e.pageY}px`
+            cursorRect.style.top = `${e.offsetY}px`
             cursorRect.style.left = `${e.pageX}px`
     
         })
