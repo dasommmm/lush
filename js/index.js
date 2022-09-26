@@ -52,14 +52,14 @@ function stickySection(){
 function dragSection(){
 
     const rect = document.getElementsByClassName('we-believe')[0];
-    const block = document.getElementsByClassName('screen-block')[0];
+    // const block = document.getElementsByClassName('screen-block')[0];
 
     document.getElementsByClassName('lush-story').ondragstart = ()=>{
         return false;
     }
 
 
-    block.addEventListener('mousedown', dragSectionEvent);
+    rect.addEventListener('mousedown', dragSectionEvent);
     makeCursor();
 
     window.addEventListener('resize', ()=>{
@@ -91,8 +91,8 @@ function dragSection(){
             if(rectLocation.x+nowX-startX>0){
                 console.log(`왼쪽이동 정지`)
                 rect.style.transform = `translateX(0px)`
-            }else if(rectLocation.x+nowX-startX<(block.clientWidth-window.innerWidth)*-1){
-                rect.style.transform = `translateX(${block.clientWidth-window.innerWidth})`
+            }else if(rectLocation.x+nowX-startX<(rect.clientWidth-window.innerWidth)*-1){
+                rect.style.transform = `translateX(${rect.clientWidth-window.innerWidth})`
                 console.log(`오른쪽 이동 정지`)
             }
             else{
@@ -105,8 +105,8 @@ function dragSection(){
         const cursorRect = document.querySelector('.cursor-rect')
         
         rect.addEventListener('mousemove',(e)=>{
-            cursorRect.style.top = `${e.offsetY}px`
-            cursorRect.style.left = `${e.pageX}px`
+            cursorRect.style.top = `${e.offsetY+10}px`
+            cursorRect.style.left = `${e.pageX-10}px`
     
         })
     }
@@ -169,4 +169,5 @@ function makeSlide(){
 }
 
 // https://github.com/venty1993/test
+// http://megaton111.cafe24.com/2016/11/29/clientx-offsetx-pagex-screenx%EC%9D%98-%EC%B0%A8%EC%9D%B4%EC%A0%90/
 // 마우스 업은 마우스 뗀거

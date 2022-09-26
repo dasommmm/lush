@@ -592,7 +592,7 @@ h3{
     width: 100vw;
     flex-shrink: 0;
     overflow: hidden;
-    cursor: none;
+    /* cursor: none; */
     position: relative;
 }
 
@@ -673,7 +673,7 @@ h3{
     padding: 0 160px;
     min-height: 700px;
     position: relative;
-    z-index: -2;
+    /* z-index: -2; */
 
 }
 
@@ -727,9 +727,13 @@ h3{
     display: flex;
     justify-content: center;
     /* margin-bottom: 100px; */
-    z-index: 10;
     position: relative;
+    
+}
 
+.button-wrapper button{
+    position: absolute;
+    z-index: 20;
 }
 
 .believe-text{
