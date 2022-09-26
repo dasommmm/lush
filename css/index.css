@@ -328,6 +328,8 @@ h3{
 
 }
 
+
+
 .section-inner-container{
     display: flex;
     flex-direction: row;
@@ -369,7 +371,7 @@ h3{
     반응형 크기에 따라 글씨 위치 달라져요 */
 }
 
-.move{
+.festa-move{
     font-family: 'Noto Sans';
     font-style: normal;
     font-weight: 900;
@@ -377,6 +379,23 @@ h3{
     color: var(--white);
     text-shadow: 7px 7px 5px rgba(0, 0, 0, 0.25);
     
+}
+
+.f,.s,.a{
+    animation: festa-move 2s 3 alternate;
+}
+
+.e,.t{
+    animation: festa-move 2s 3 alternate-reverse;
+}
+
+@keyframes festa-move {
+    from{
+        transform: translateY(-20px);
+    }
+    to{
+        transform: translateY(20px);
+    }
 }
 
 .summer-product{
@@ -395,14 +414,32 @@ h3{
     width: 37%;
     right: 34%;
     top: 23%;
+    /* animation: summer-move 3s alternate; */
 }
+
 
 .dirty{
     position: absolute;
     width: 42%;
     right: 0%;
     top: 39%;
+    /* animation: summer-move 3s alternate; */
+    
+}
 
+.summer-move{
+    animation: summer-move 3s infinite alternate;
+
+}
+
+@keyframes summer-move {
+    from{
+        transform: translateX(-100px);
+    }
+    to{
+        transform: translatX(100px);
+  
+    }
 }
 
 .fish1{
@@ -444,6 +481,42 @@ h3{
 
 }
 
+ /* animation: be-the-move 3s alternate; */
+
+
+
+@keyframes be-the-move {
+    0%{
+        transform: translateX(-100px);
+    }
+    100%{
+        transform: translateX(0px);
+
+    }
+}
+
+@keyframes best-move {
+    20%{
+        transform: translateX(-100px);
+    }
+    100%{
+        transform: translateX(0px);
+
+    }
+}
+
+@keyframes reviewer-move {
+    40%{
+        transform: translateX(-100px);
+    }
+    100%{
+        transform: translateX(0px);
+
+    }
+}
+
+
+
 .be-the-best div:first-child{
     display: flex;
 }
@@ -456,6 +529,8 @@ h3{
 
 .be-the{
     margin-bottom: 23px;
+     animation: be-the-move 5s infinite alternate;
+
 }
 
 .be{
@@ -486,11 +561,15 @@ h3{
     background-color: #008A3A;
     color: #F2C801;
     margin-bottom: 23px;
+    animation: best-move 5s infinite alternate;
+
 }
 
 .reviewer{
     background-color: #F3A7D8;
     color: #008A3A;
+    animation: reviewer-move 5s infinite alternate;
+
 }
 
 .download-back{
@@ -505,6 +584,7 @@ h3{
     width: 50%;
     right: 0;
     top: 40%;
+    animation: festa-move 3s infinite alternate;
 }
 
 

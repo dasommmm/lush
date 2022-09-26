@@ -25,7 +25,8 @@ function stickySection(){
 
     const eventText = document.getElementsByClassName('event-text');
     const eventImg = document.getElementsByClassName('event-img');
-    
+    const dirty = document.getElementsByClassName('dirty');
+
     for(let i=0; i< eventText.length; i++){
         
         window.addEventListener('scroll',()=>{
@@ -33,13 +34,20 @@ function stickySection(){
             //1000가까이 됐을때 사진 opacity1
             if(eventText[i].getBoundingClientRect().top - window.innerHeight < 0){
                 eventImg[i].classList.remove('event-opacity');
+                dirty[0].classList.add('summer-move');
+                
+                
             }else{
                 if(i!==0){
                     eventImg[i].classList.add('event-opacity');
                 }
-                
+
+
             }
             
+            // Element.addEventListener('animationiteration'()=>{
+
+            // })
         })
     }
 
