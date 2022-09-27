@@ -5,3 +5,9 @@
 .event-opacity{
     opacity: 0;
 }
+
+.sa{
+    transform: translateX(-100px);
+    opacity: 0;
+
+}

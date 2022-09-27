@@ -25,7 +25,7 @@ function stickySection(){
 
     const eventText = document.getElementsByClassName('event-text');
     const eventImg = document.getElementsByClassName('event-img');
-    const dirty = document.getElementsByClassName('dirty');
+
 
     for(let i=0; i< eventText.length; i++){
         
@@ -34,12 +34,14 @@ function stickySection(){
             //1000가까이 됐을때 사진 opacity1
             if(eventText[i].getBoundingClientRect().top - window.innerHeight < 0){
                 eventImg[i].classList.remove('event-opacity');
-                dirty[0].classList.add('summer-move');
+                eventImg[i].classList.remove('sa')
                 
                 
             }else{
+                eventImg[i].classList.remove('play-aniamtion')
                 if(i!==0){
                     eventImg[i].classList.add('event-opacity');
+                    eventImg[i].classList.add('sa');
                 }
 
 
@@ -52,15 +54,31 @@ function stickySection(){
     }
 
 }
+scrollAnimation();
+// // ====
+function scrollAnimation(){
+    const sa = document.getElementsByClassName('sa');
+    console.log(sa);
+    for(i=0;i<sa.length;i++){
+        sa[i].addEventListener('scroll',()=>{
+            if(sa[i].getBoundingClientRect().top - window.innerHeight < 0){
+                sa[i].classList.remove('sa');
+            } else {
+                sa[i].classList.add('sa');
+            }
+        })
+    }
+}
 
-// ====
 
 
 
+
+// ========
 function dragSection(){
 
     const rect = document.getElementsByClassName('we-believe')[0];
-    // const block = document.getElementsByClassName('screen-block')[0];
+    const block = document.querySelector('.screen-block');
 
     document.getElementsByClassName('lush-story').ondragstart = ()=>{
         return false;
@@ -113,11 +131,14 @@ function dragSection(){
         const cursorRect = document.querySelector('.cursor-rect')
         
         rect.addEventListener('mousemove',(e)=>{
-            cursorRect.style.top = `${e.offsetY+10}px`
-            cursorRect.style.left = `${e.pageX-10}px`
+            cursorRect.style.top = `${e.pageY-(rect.getBoundingClientRect().top+window.pageYOffset)+2}px`
+            // 드래그 커서가 섹션 안에서만 보여야해서 전체 스크롤 한만큼에서 보라 섹션이 스크롤 내려온 만큼을 더해서 커서 위치에서 빼줌
+            cursorRect.style.left = `${e.pageX}px`
     
         })
     }
+
+
 
     
 }

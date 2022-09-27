@@ -381,13 +381,20 @@ h3{
     
 }
 
-.f,.s,.a{
-    animation: festa-move 2s 3 alternate;
+.word-motion1{
+    animation: festa-move 2s infinite alternate;
+
 }
 
-.e,.t{
-    animation: festa-move 2s 3 alternate-reverse;
+.word-motion2{
+    animation: festa-move 2s infinite alternate-reverse;
+
 }
+
+
+
+
+
 
 @keyframes festa-move {
     from{
@@ -415,6 +422,7 @@ h3{
     right: 34%;
     top: 23%;
     /* animation: summer-move 3s alternate; */
+    transition: 1s;
 }
 
 
@@ -424,8 +432,9 @@ h3{
     right: 0%;
     top: 39%;
     /* animation: summer-move 3s alternate; */
-    
+    transition: 1s;
 }
+
 
 .summer-move{
     animation: summer-move 3s infinite alternate;
@@ -1320,4 +1329,31 @@ h4{
         gap: 20px;
     }
 
+    .cursor-rect{
+        display: none;
+    }
+
+}
+
+/* 뉴모피즘 */
+
+@media screen and (max-width:599px){
+    h2{
+        font-size: 50px;
+    }
+
+    .circle{
+        width: 300px;
+        height: 300px;
+    }
+
+    .orange-pro{
+        width: 70%;
+        height: 70%;
+    }
+
+    .orange-tex{
+        width: 70%;
+        height: 70%;
+    }
 }
