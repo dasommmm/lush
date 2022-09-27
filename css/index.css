@@ -1266,6 +1266,10 @@ h4{
     }
 
 
+    .small-img-wrapper div{
+        margin-right: 20px;
+    }
+
 
     .we-believe{
         display: flex;
@@ -1489,6 +1493,10 @@ h4{
         text-align: center;
         margin-bottom: 17px;
 
+    }
+
+    .small-img-wrapper div{
+        margin-right: 0;
     }
 
     .fish1{
