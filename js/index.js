@@ -173,6 +173,7 @@ function makeSlide(){
     
     window.addEventListener('resize',()=>{
         슬라이드너비 = sliderContainer.clientWidth;
+        slidWrapper.style.transform = `translateX(-${슬라이드너비*index}px)`;
     });
     
     

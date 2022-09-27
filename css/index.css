@@ -130,6 +130,10 @@ section{
     margin: 0 auto;
 }
 
+.br-hidden{
+    display: none;
+}
+
 h2{
     font-family: 'Noto Sans kR', sans-serif;
     font-size: 94px;
@@ -817,13 +821,10 @@ h3{
     justify-content: center;
     /* margin-bottom: 100px; */
     position: relative;
+    z-index: 20;
     
 }
 
-.button-wrapper button{
-    position: absolute;
-    z-index: 20;
-}
 
 .believe-text{
     font-family: 'Noto Sans KR';
@@ -895,6 +896,7 @@ h3{
 
 .black-container{
     width: calc(100vw - 17px);
+    /* width: 100vw; */
     /* height: 80%; */
     /* padding-top: 20vh; */
     flex-shrink: 0;
@@ -1049,7 +1051,6 @@ h3{
 
 footer{
     background-color: rgba(34, 34, 34, 0.95);
-    padding:  150px 0 ;
     padding: 70px 30px;
 
 }
@@ -1223,15 +1224,20 @@ h4{
 
 
 @media screen and (max-width:1239px){
+    .video-letter svg{
+        width: 25vw;
+    }
+
+    .best-seller{
+        padding: 0 32px;
+        padding-bottom: 100px;
+
+    }
+
     .best-wrapper{
         width: fit-content;
     }
 
-    .product{
-        padding: 0 32px;
-
-    }
-    
     .product-wrapper{
         flex-direction: column-reverse;
         
@@ -1335,11 +1341,72 @@ h4{
 
 }
 
+@media screen and (max-width:860px) {
+    .we-believe-back h2{
+        font-size: 60px;
+        padding: 0 16px;
+        line-height: 120px;
+        width: 300px;
+    }
+
+    .long-container{
+        padding: 0 16px;
+        margin-bottom: 100px;
+    }
+
+    .line{
+        width: 500px;
+        margin: 0 auto;
+        margin-bottom: 100px;
+    }
+
+    .top{
+        flex-direction: column;
+        height: auto;
+        padding-top: 20px;
+    }
+
+    .opacity-box{
+        width: 500px;
+        height: max-content;
+        margin: 0;
+    }
+
+    .button-wrapper{
+        padding: 20px 0;
+    }
+
+    .logo-img{
+        width: 50%;
+        height: 50%;
+        top: -10%;
+        left: -14%;
+    }
+}
+
+
 /* 뉴모피즘 */
 
 @media screen and (max-width:599px){
+    section{
+        margin: 0;
+    }
+    .video-letter svg{
+        width: 30vw;
+    }
+    
+    .best-seller{
+        padding: 0 16px;
+        padding-bottom: 50px;
+
+    }
+
     h2{
         font-size: 50px;
+    }
+
+    .br-hidden{
+        display: block;
     }
 
     .circle{
@@ -1353,7 +1420,148 @@ h4{
     }
 
     .orange-tex{
+        width: 60%;
+        height: 55%;
+        left: 40%;
+    }
+
+    .product-name{
+        font-size: 40px;
+    }
+
+    .type{
+        font-size: 24px;
+
+    }
+
+    .product-description{
+        font-size: 16px;
+
+    }
+
+    .mask-tex{
+        width: 55%;
+        height: 70%;
+    }
+
+    .mask-pro{
         width: 70%;
         height: 70%;
+    }
+
+    .sleepy-tex{
+        width: 55%;
+        height: auto;
+        left: 45%;
+    }
+
+    .sleepy-pro{
+        width: 40%;
+        height: 88%;
+    }
+
+    .event-text{
+        width: 300px;
+        box-sizing: border-box;
+        padding: 12px;
+    }
+
+    .event-title-wrapper{
+        margin: 0 auto;
+        width: 250px;
+        margin-bottom: 17px;
+    }
+
+    .event-title-wrapper svg{
+        width: 250px;
+        height: 50px;
+    }
+
+    .small-title{
+        font-size: 20px;
+        text-align: center;
+        margin-bottom: 17px;
+
+    }
+
+    .event-description{
+        font-size: 14px;
+        text-align: center;
+        margin-bottom: 17px;
+
+    }
+
+    .fish1{
+        right: 42%;
+        top: 9%;
+    }
+
+    .fish2{
+        right: 72%;
+        top: 72%;
+    }
+
+    .line{
+        width: 328px;
+        margin: 0;
+    }
+
+    .opacity-box{
+        width: 300px;
+    }
+
+    .top-spa img{
+        width: 85%;
+    }
+
+    .spa-name-container{
+        flex-direction: column;
+    }
+
+    .spa-name{
+        font-size: 24px;
+    }
+
+    .spa-small-title{
+        font-size: 16px;
+
+    }
+
+    .tag{
+        font-size: 14px;
+    }
+
+    .bottom-spa{
+        width: 300px;
+        margin: 0 16px;
+    }
+
+    .bottom-spa > div{
+        width: 300px;
+    }
+
+    .spa-icon{
+        width: 28px;
+        height: 28px;
+    }
+
+    .spa-des-title{
+        font-size: 16px;
+    }
+
+    .spa-des-small{
+        font-size: 14px;
+    }
+
+    footer{
+        padding: 70px 16px;
+    }
+
+    .subscribe p{
+        font-size: 10px;
+    }
+
+    .notice a{
+        font-size: 9px;
     }
 }
