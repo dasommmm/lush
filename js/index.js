@@ -1,8 +1,8 @@
 scrollHeader();
 stickySection();
+scrollAnimation();
 dragSection();
 makeSlide();
-
 
 
 
@@ -54,11 +54,11 @@ function stickySection(){
     }
 
 }
-scrollAnimation();
+
 // // ====
 function scrollAnimation(){
     const sa = document.getElementsByClassName('sa');
-    console.log(sa);
+    // console.log(sa);
     for(i=0;i<sa.length;i++){
         sa[i].addEventListener('scroll',()=>{
             if(sa[i].getBoundingClientRect().top - window.innerHeight < 0){
