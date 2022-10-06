@@ -31,6 +31,7 @@ function stickySection(){
         
         window.addEventListener('scroll',()=>{
             // console.log(eventText[1].getBoundingClientRect().top)
+            // console.log(window.innerHeight)
             //1000가까이 됐을때 사진 opacity1
             if(eventText[i].getBoundingClientRect().top - window.innerHeight < 0){
                 eventImg[i].classList.remove('event-opacity');
@@ -38,7 +39,7 @@ function stickySection(){
                 
                 
             }else{
-                eventImg[i].classList.remove('play-aniamtion')
+                // eventImg[i].classList.remove('play-aniamtion')
                 if(i!==0){
                     eventImg[i].classList.add('event-opacity');
                     eventImg[i].classList.add('sa');
