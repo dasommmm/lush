@@ -1,6 +1,6 @@
 scrollHeader();
 stickySection();
-scrollAnimation();
+// scrollAnimation();
 dragSection();
 makeSlide();
 
@@ -57,19 +57,19 @@ function stickySection(){
 }
 
 // // ====
-function scrollAnimation(){
-    const sa = document.getElementsByClassName('sa');
-    // console.log(sa);
-    for(i=0;i<sa.length;i++){
-        sa[i].addEventListener('scroll',()=>{
-            if(sa[i].getBoundingClientRect().top - window.innerHeight < 0){
-                sa[i].classList.remove('sa');
-            } else {
-                sa[i].classList.add('sa');
-            }
-        })
-    }
-}
+// function scrollAnimation(){
+//     const sa = document.getElementsByClassName('sa');
+//     console.log(sa);
+//     for(i=0;i<sa.length;i++){
+//         sa[i].addEventListener('scroll',()=>{
+//             if(sa[i].getBoundingClientRect().top - window.innerHeight < 0){
+//                 sa[i].classList.remove('sa');
+//             } else {
+//                 sa[i].classList.add('sa');
+//             }
+//         })
+//     }
+// }
 
 
 
@@ -79,7 +79,7 @@ function scrollAnimation(){
 function dragSection(){
 
     const rect = document.getElementsByClassName('we-believe')[0];
-    const block = document.querySelector('.screen-block');
+    // const block = document.querySelector('.screen-block');
 
     document.getElementsByClassName('lush-story').ondragstart = ()=>{
         return false;
@@ -128,6 +128,7 @@ function dragSection(){
         }
     
     }
+
     function makeCursor(){
         const cursorRect = document.querySelector('.cursor-rect')
         
