@@ -30,7 +30,7 @@ function stickySection(){
     for(let i=0; i< eventText.length; i++){
         
         window.addEventListener('scroll',()=>{
-            // console.log(eventText[1].getBoundingClientRect().top)
+            console.log(eventText[1].getBoundingClientRect().top - window.innerHeight)
             // console.log(window.innerHeight)
             //1000가까이 됐을때 사진 opacity1
             if(eventText[i].getBoundingClientRect().top - window.innerHeight < 0){
