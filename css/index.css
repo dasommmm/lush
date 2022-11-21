@@ -1223,7 +1223,7 @@ h4{
 /* 위아래로 화면이 작아지면 푸터가 넘쳐서 위에랑 겹쳐요 */
 
 
-@media screen and (max-width:1239px){
+@media screen and (max-width:1240px){
     .video-letter svg{
         width: 25vw;
     }
