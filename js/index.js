@@ -101,7 +101,7 @@ function dragSection(){
         console.log(`리사이즈 이벤트 종료`)
     })
 
-    //dragSectionEvent가 이해가 안가무ㅜ 질문!!!!!!!!!!!!!!!!!!!!!!!!!?
+    //dragSectionEvent 질문!!!!!!!!!!!!!!!!!!!!!!!!!?
 
     function dragSectionEvent(e){
         const rectLocation = rect.getBoundingClientRect();
@@ -200,6 +200,5 @@ function makeSlide(){
     
 }
 
-// https://github.com/venty1993/test
-// http://megaton111.cafe24.com/2016/11/29/clientx-offsetx-pagex-screenx%EC%9D%98-%EC%B0%A8%EC%9D%B4%EC%A0%90/
+//
 // 마우스 업은 마우스 뗀거
